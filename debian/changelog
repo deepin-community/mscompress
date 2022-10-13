@@ -1,0 +1,127 @@
+mscompress (0.4-9) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.6.0.
+  * Adjust debian/watch URL.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 29 Oct 2021 11:23:20 +0200
+
+mscompress (0.4-8) unstable; urgency=medium
+
+  * Adjust lintian overrides.
+  * Bump Standards-Version to 4.5.1.
+  * Bump debhelper-compat to level 13.
+  * Remove DEB_LDFLAGS_MAINT_APPEND from debian/rules.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 19 Nov 2020 14:58:51 +0100
+
+mscompress (0.4-7) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.5.0.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 23 Jan 2020 16:33:04 +0100
+
+mscompress (0.4-6) unstable; urgency=medium
+
+  * Adopt package.
+    Closes: #930308
+  * Bump Standards-Version to 4.4.1.
+  * Rename patches.
+  * Add Rules-Requires-Root no.
+  * Adjust source lintian-overrides.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 20 Jan 2020 12:21:17 +0100
+
+mscompress (0.4-5) unstable; urgency=medium
+
+  * QA upload.
+  * debian/control:
+    + Update Homepage field and use the upstream GitHub project.
+  * debian/watch: Monitor upstream release on GitHub.
+  * debian/copyright: Update upstream URL.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 20 Sep 2019 14:14:52 -0400
+
+mscompress (0.4-4) unstable; urgency=medium
+
+  * QA upload.
+  * debian/control:
+    + Set Maintainer to Debian QA Group.
+    + Bump debhelper compat to v12.
+    + Bump Standards-Version to 4.3.0.
+    + Update Vcs-* fields to use git repo on Salsa Debian Group.
+  * debian/compat: Removed, useless now.
+  * debian/copyright: Use secure URI.
+  * debian/patches: Add patch 0002 to fix man page wrapping.
+    (Closes: #775694)
+
+ -- Boyuan Yang <byang@debian.org>  Mon, 17 Jun 2019 16:16:27 -0400
+
+mscompress (0.4-3) unstable; urgency=low
+
+  * Add patch to fix FTBFS on big-endian archs (Thanks Roland Stigge)
+    (Closes: #712751)
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Wed, 19 Jun 2013 21:26:11 +0200
+
+mscompress (0.4-2) unstable; urgency=low
+
+  * experimental to unstable because mscompress 0.4 was only in experimental due
+    to the freeze.
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Tue, 18 Jun 2013 18:20:05 +0200
+
+mscompress (0.4-1) experimental; urgency=low
+
+  * New maintainer. (Closes: #677774)
+  * New upstream release.
+  * Bump Standards-Version to 3.9.4 (no changes necessary).
+  * Bump debian/compat to level 9
+  * Simplify debian/rules to minimum debhelper rule.
+  * Add debian/watch.
+  * Update debian/copyright to machine-readable copyright format.
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Wed, 30 Jan 2013 21:14:52 +0100
+
+mscompress (0.3-4) unstable; urgency=low
+
+  * QA upload.
+  * Add patch to fix argument parsing on ppc and arm (Thanks Julian Squires)
+    (Closes: #600549)
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Tue, 04 Dec 2012 01:13:59 +0100
+
+mscompress (0.3-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Update config.guess/config.sub. (Closes: #537377).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sun, 21 Feb 2010 16:57:57 +0000
+
+mscompress (0.3-3) unstable; urgency=low
+
+  * New maintainer. (Closes: #404470)
+  * Bump Standards-Version to 3.7.3.
+  * Add the Vcs-Git/Vcs-Browser fields.
+  * Add the DM-Upload-Allowed field.
+  * Refresh debian/copyright.
+  * Refresh long description in debian/control.
+  * Create debian/compat and set it to level 4.
+  * Fix errors in manpages.
+  * Refresh debian/rules.
+    + Switch from dh_installmanpages to dh_installman.
+    + Remove unused debhelper tools.
+    + Use dh_install: create debian/install.
+
+ -- Aurélien GÉRÔME <ag@roxor.cx>  Fri, 08 Feb 2008 16:53:28 +0100
+
+mscompress (0.3-2) unstable; urgency=low
+
+  * Added Build-Depends (closes: Bug#175473)
+
+ -- Jefferson E. Noxon <jeff@debian.org>  Tue, 25 Feb 2003 20:22:10 -0000
+
+mscompress (0.3-1) unstable; urgency=low
+
+  * Initial upload.
+
+ -- Jefferson E. Noxon <jeff@debian.org>  Wed, 26 Apr 2000 12:37:43 -0500

@@ -1,0 +1,23 @@
+Source: mscompress
+Section: otherosfs
+Priority: optional
+Maintainer: Patrick Matthäi <pmatthaei@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://github.com/stapelberg/mscompress
+
+Package: mscompress
+Architecture: any
+Depends: ${misc:Depends},
+ ${shlibs:Depends},
+Description: Microsoft "compress.exe/expand.exe" compatible (de)compressor
+ This package contains two programs:
+ .
+  * msexpand which decompresses files compressed by the Microsoft
+    compress.exe utility (e.g. Win 3.x installation files);
+  * mscompress which compresses files using the LZ77 compression
+    algorithm.
+ .
+ Files can be decompressed using Microsoft expand.exe or msexpand(1).

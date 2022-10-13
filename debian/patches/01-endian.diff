@@ -1,0 +1,35 @@
+Description: Fix big endian build
+ mscompress assumes WORDS_BIGENDIAN to be defined in the big endian case. Tests
+ revealed that we need to specify it on big endian arches.
+Author: Roland Stigge <stigge@antcom.de>
+
+Index: mscompress-0.4/src/msexpand.c
+===================================================================
+--- mscompress-0.4.orig/src/msexpand.c	2013-06-19 09:54:57.000000000 +0200
++++ mscompress-0.4/src/msexpand.c	2013-06-19 10:02:17.298322577 +0200
+@@ -27,6 +27,10 @@
+ #include <stdint.h>
+ #include <getopt.h>
+ 
++#if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
++#define WORDS_BIGENDIAN
++#endif
++
+ extern char *version_string;
+ 
+ #define N 4096
+Index: mscompress-0.4/src/mscompress.c
+===================================================================
+--- mscompress-0.4.orig/src/mscompress.c	2013-06-19 09:54:57.000000000 +0200
++++ mscompress-0.4/src/mscompress.c	2013-06-19 10:02:05.978319764 +0200
+@@ -28,6 +28,10 @@
+ #include <stdint.h>
+ #include <getopt.h>
+ 
++#if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
++#define WORDS_BIGENDIAN
++#endif
++
+ extern char *version_string;
+ 
+ #define BSWAP32(x)             ((((x)&0xFF)<<24)+(((x)<<8)&0xFF0000)+\

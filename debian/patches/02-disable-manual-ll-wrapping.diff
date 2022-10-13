@@ -1,0 +1,38 @@
+From: Jakub Wilk <jwilk@debian.org>
+Date: Sun, 18 Jan 2015 20:34:50 +0100
+Subject: Disable manual .ll wrapping
+
+Remove the .ll requests from the manpages. They don't seem to serve
+any purpose here, other than ruining line wrapping.
+
+Bug-Debian: https://bugs.debian.org/775694
+Last-Update: 2019-06-17
+---
+ src/mscompress.1 | 1 -
+ src/msexpand.1   | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/src/mscompress.1 b/src/mscompress.1
+index 96db0e3..ac1890f 100644
+--- a/src/mscompress.1
++++ b/src/mscompress.1
+@@ -2,7 +2,6 @@
+ .SH NAME
+ mscompress \- compress data using LZ77 algorithm
+ .SH SYNOPSIS
+-.ll +8
+ .B mscompress
+ [
+ .B \-h
+diff --git a/src/msexpand.1 b/src/msexpand.1
+index 0c0a4de..fc94914 100644
+--- a/src/msexpand.1
++++ b/src/msexpand.1
+@@ -2,7 +2,6 @@
+ .SH NAME
+ msexpand \- decompress data compressed using mscompress(1) or COMPRESS.EXE
+ .SH SYNOPSIS
+-.ll +8
+ .B msexpand
+ [
+ .B \-h
